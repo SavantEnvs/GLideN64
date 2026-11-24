@@ -1,0 +1,9 @@
+project: savantenvs/GLideN64
+target: cache-hts
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cache-hts/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cache_hts
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/GLideN64
+target: hires-png
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hires-png/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_hires_png
+    libfuzzer: true
+    timeout: 5
